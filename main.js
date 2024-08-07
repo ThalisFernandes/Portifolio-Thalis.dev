@@ -34,14 +34,14 @@ const torus = new THREE.Mesh(geometry, material);
 
 // Lights
 
-// const light = new THREE.PointLight(0xffffff, 5, 50);
-// light.position.set(-10,20, 5)
-// scene.add( light );
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(10, 10, 5);
-
-const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight);
+const light = new THREE.PointLight(0xffffff, 5, 50, 1, 0.3);
+light.position.set(-20,0, 5)
+scene.add( light );
+// const pointLight = new THREE.PointLight(0xffffff);
+// pointLight.position.set(10, 10, 5);
+// 
+// const ambientLight = new THREE.AmbientLight(0xffffff);
+// scene.add(pointLight, ambientLight);
 
 // Helpers
 
@@ -90,11 +90,12 @@ const moon = new THREE.Mesh(
 // scene.add(moon);
 
 // Lua quebrada
-Loader.load( './models/moon/broken_moon.glb', function ( gltf ) {
+Loader.load( './models/estacao/space_station_4k.glb', function ( gltf ) {
   gltf.scene.position.z = 30;
   // gltf.scene.setX(-10)
   // gltf.scene.rotation.x = -20;
   gltf.scene.position.y = -2;
+  gltf.scene.position.x = -5;
 	scene.add( gltf.scene );
   
 }, undefined, function ( error ) {
