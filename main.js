@@ -125,23 +125,6 @@ Loader.load( './models/Astronauta/astronaut.glb', function ( gltf ) {
 });
 
 
-Loader.load( './models/earth/earth.glb', function ( gltf ) {
-  gltf.scene.position.z = 50;
-  gltf.scene.position.x = 50;
-  gltf.scene.position.y = 150
-
-  // gltf.scene.setX(-10)
-  
-  
-
-	scene.add( gltf.scene );
-  
-}, undefined, function ( error ) {
-
-	console.error( error );
-
-});
-
 // brokemoon.position.z = 35;
 // brokemoon.position.setX(-10);
 
